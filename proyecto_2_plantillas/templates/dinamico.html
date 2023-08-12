@@ -8,6 +8,12 @@
   <body>
     <h1>Hola {{name}}</h1>
     <h3>Categorías</h3>
-    <p>{{categoria}}</p>
+    <ul>
+      {% for i in categoria %} {% if i == 'code' %}
+      <li><b> {{ i }}</b></li>
+      {% else %}
+      <li>{{ i }}</li>
+      {% endif %} {% endfor %}
+    </ul>
   </body>
 </html>
